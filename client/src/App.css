@@ -1,0 +1,277 @@
+.app-shell {
+  width: min(1180px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: 32px 0;
+}
+
+.topbar {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 18px;
+}
+
+.eyebrow {
+  margin: 0 0 6px;
+  color: #247466;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+h1,
+h2,
+p {
+  margin-top: 0;
+}
+
+h1 {
+  max-width: 720px;
+  margin-bottom: 0;
+  color: #18221f;
+  font-size: clamp(2rem, 5vw, 4.6rem);
+  line-height: 1;
+}
+
+h2 {
+  margin-bottom: 16px;
+  color: #18221f;
+  font-size: 1.15rem;
+}
+
+.search,
+input,
+select {
+  min-height: 44px;
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid #cfd8d3;
+  border-radius: 8px;
+  padding: 10px 12px;
+  background: #ffffff;
+  color: #18221f;
+  font: inherit;
+}
+
+.search {
+  max-width: 330px;
+}
+
+button {
+  min-height: 44px;
+  border: 0;
+  border-radius: 8px;
+  padding: 10px 16px;
+  background: #1d6f61;
+  color: #ffffff;
+  font: inherit;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #15584d;
+}
+
+.toast {
+  display: block;
+  width: 100%;
+  margin-bottom: 18px;
+  border: 1px solid #a7d4c7;
+  background: #eaf8f3;
+  color: #1f5f53;
+  text-align: left;
+}
+
+.nav-tabs {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 18px;
+  overflow-x: auto;
+}
+
+.nav-tabs a {
+  flex-shrink: 0;
+  border: 1px solid #d2ded8;
+  border-radius: 8px;
+  padding: 10px 14px;
+  color: #1d6f61;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.nav-tabs a.active,
+.nav-tabs a:hover {
+  background: #1d6f61;
+  color: #ffffff;
+}
+
+.stats-grid,
+.workspace,
+.data-grid,
+.page-grid {
+  display: grid;
+  gap: 16px;
+}
+
+.stats-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  margin-bottom: 16px;
+}
+
+.stat-card,
+.panel {
+  border: 1px solid #dbe4df;
+  border-radius: 8px;
+  background: #ffffff;
+  box-shadow: 0 10px 28px rgba(19, 42, 35, 0.08);
+}
+
+.stat-card {
+  padding: 18px;
+}
+
+.stat-card span,
+.record span,
+.record small,
+.muted {
+  color: #6a7973;
+}
+
+.stat-card strong {
+  display: block;
+  margin-top: 8px;
+  color: #18221f;
+  font-size: 2rem;
+}
+
+.workspace {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin-bottom: 16px;
+}
+
+.data-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin-bottom: 16px;
+}
+
+.page-grid {
+  grid-template-columns: minmax(260px, 360px) minmax(0, 1fr);
+  align-items: start;
+}
+
+.panel {
+  padding: 18px;
+}
+
+.form-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.split {
+  display: grid;
+  grid-template-columns: 1.4fr 0.8fr;
+  gap: 12px;
+}
+
+.table-panel {
+  min-height: 280px;
+}
+
+.record-list {
+  display: grid;
+  gap: 10px;
+}
+
+.record {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  border: 1px solid #ecf0ed;
+  border-radius: 8px;
+  padding: 12px;
+  background: #fbfdfc;
+}
+
+.record div:first-child {
+  min-width: 0;
+}
+
+.record strong,
+.record span,
+.record small {
+  display: block;
+}
+
+.record strong {
+  overflow-wrap: anywhere;
+  color: #18221f;
+}
+
+.record-actions {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  gap: 8px;
+}
+
+.pill {
+  min-width: 56px;
+  border-radius: 999px;
+  padding: 6px 10px;
+  background: #edf4f1;
+  color: #1c574d;
+  font-size: 0.85rem;
+  font-weight: 800;
+  text-align: center;
+}
+
+.pill.warn {
+  background: #fff4d7;
+  color: #755313;
+}
+
+.pill.ok {
+  background: #e3f6e9;
+  color: #27643a;
+}
+
+.ghost {
+  min-height: 36px;
+  border: 1px solid #d2ded8;
+  background: transparent;
+  color: #1d6f61;
+}
+
+.ghost:hover {
+  background: #eef7f3;
+}
+
+@media (max-width: 900px) {
+  .topbar {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .search {
+    max-width: none;
+  }
+
+  .stats-grid,
+  .workspace,
+  .data-grid,
+  .page-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .record,
+  .record-actions {
+    align-items: stretch;
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "name": "library_mang_sys",
+  "version": "1.0.0",
+  "description": "Library management system built with React, Express, and MongoDB.",
+  "main": "server/server.js",
+  "scripts": {
+    "server": "nodemon server/server.js",
+    "client": "npm run dev --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "start": "node server/server.js",
+    "build": "npm run build --prefix client"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "cors": "^2.8.6",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "mongoose": "^9.6.2",
+    "nodemon": "^3.1.14"
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.1"
+  }
+}
